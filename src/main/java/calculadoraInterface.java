@@ -10,6 +10,9 @@
  */
 public class calculadoraInterface extends javax.swing.JFrame {
 
+    int num1;
+    String signo;
+    int num2;
     /**
      * Creates new form calculadoraInterface
      */
@@ -27,7 +30,7 @@ public class calculadoraInterface extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        pantalla = new javax.swing.JTextArea();
         siete = new javax.swing.JButton();
         uno = new javax.swing.JButton();
         cuatro = new javax.swing.JButton();
@@ -51,9 +54,10 @@ public class calculadoraInterface extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        pantalla.setColumns(20);
+        pantalla.setRows(5);
+        pantalla.setEnabled(false);
+        jScrollPane1.setViewportView(pantalla);
 
         siete.setText("7");
         siete.addActionListener(new java.awt.event.ActionListener() {
@@ -70,10 +74,25 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         cuatro.setText("4");
+        cuatro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cuatroActionPerformed(evt);
+            }
+        });
 
         ocho.setText("8");
+        ocho.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ochoActionPerformed(evt);
+            }
+        });
 
         dos.setText("2");
+        dos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dosActionPerformed(evt);
+            }
+        });
 
         cinco.setText("5");
         cinco.addActionListener(new java.awt.event.ActionListener() {
@@ -83,10 +102,25 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         nueve.setText("9");
+        nueve.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nueveActionPerformed(evt);
+            }
+        });
 
         tres.setText("3");
+        tres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tresActionPerformed(evt);
+            }
+        });
 
         seis.setText("6");
+        seis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                seisActionPerformed(evt);
+            }
+        });
 
         cero.setText("0");
         cero.addActionListener(new java.awt.event.ActionListener() {
@@ -97,7 +131,12 @@ public class calculadoraInterface extends javax.swing.JFrame {
 
         cambiaSigno.setText("+/-");
 
-        punto.setText(".");
+        punto.setText(",");
+        punto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                puntoActionPerformed(evt);
+            }
+        });
 
         dividir.setText("/");
         dividir.addActionListener(new java.awt.event.ActionListener() {
@@ -107,6 +146,11 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         multiplica.setText("x");
+        multiplica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                multiplicaActionPerformed(evt);
+            }
+        });
 
         suma.setText("+");
         suma.addActionListener(new java.awt.event.ActionListener() {
@@ -116,6 +160,11 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         resta.setText("-");
+        resta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                restaActionPerformed(evt);
+            }
+        });
 
         igual.setText("=");
         igual.addActionListener(new java.awt.event.ActionListener() {
@@ -125,6 +174,11 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         raizCuadrada.setText("√");
+        raizCuadrada.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                raizCuadradaActionPerformed(evt);
+            }
+        });
 
         reiniciar.setText("C");
         reiniciar.addActionListener(new java.awt.event.ActionListener() {
@@ -240,35 +294,93 @@ public class calculadoraInterface extends javax.swing.JFrame {
 
     private void cincoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cincoActionPerformed
         // TODO add your handling code here:
+        pantalla.setText(pantalla.getText()+"5");
     }//GEN-LAST:event_cincoActionPerformed
 
     private void ceroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceroActionPerformed
         // TODO add your handling code here:
+        pantalla.setText(pantalla.getText()+"0");
     }//GEN-LAST:event_ceroActionPerformed
 
     private void sumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sumaActionPerformed
         // TODO add your handling code here:
+        pantalla.setText(pantalla.getText()+"+");
     }//GEN-LAST:event_sumaActionPerformed
 
     private void dividirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dividirActionPerformed
         // TODO add your handling code here:
+        pantalla.setText(pantalla.getText()+"/");
     }//GEN-LAST:event_dividirActionPerformed
 
     private void sieteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sieteActionPerformed
         // TODO add your handling code here:
+        pantalla.setText(pantalla.getText()+"7");
     }//GEN-LAST:event_sieteActionPerformed
 
     private void igualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_igualActionPerformed
         // TODO add your handling code here:
+        pantalla.setText(pantalla.getText()+"=");
     }//GEN-LAST:event_igualActionPerformed
 
     private void reiniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reiniciarActionPerformed
         // TODO add your handling code here:
+        pantalla.setText("");
     }//GEN-LAST:event_reiniciarActionPerformed
 
     private void unoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unoActionPerformed
         // TODO add your handling code here:
+        pantalla.setText(pantalla.getText()+"1");
     }//GEN-LAST:event_unoActionPerformed
+
+    private void dosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dosActionPerformed
+        // TODO add your handling code here:
+        pantalla.setText(pantalla.getText()+"2");
+    }//GEN-LAST:event_dosActionPerformed
+
+    private void tresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tresActionPerformed
+        // TODO add your handling code here:
+        pantalla.setText(pantalla.getText()+"3");
+    }//GEN-LAST:event_tresActionPerformed
+
+    private void cuatroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cuatroActionPerformed
+        // TODO add your handling code here:
+        pantalla.setText(pantalla.getText()+"4");
+    }//GEN-LAST:event_cuatroActionPerformed
+
+    private void seisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seisActionPerformed
+        // TODO add your handling code here:
+        pantalla.setText(pantalla.getText()+"6");
+    }//GEN-LAST:event_seisActionPerformed
+
+    private void ochoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ochoActionPerformed
+        // TODO add your handling code here:
+        pantalla.setText(pantalla.getText()+"8");
+    }//GEN-LAST:event_ochoActionPerformed
+
+    private void nueveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nueveActionPerformed
+        // TODO add your handling code here:
+        pantalla.setText(pantalla.getText()+"9");
+    }//GEN-LAST:event_nueveActionPerformed
+
+    private void restaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_restaActionPerformed
+        // TODO add your handling code here:
+        pantalla.setText(pantalla.getText()+"-");
+    }//GEN-LAST:event_restaActionPerformed
+
+    private void multiplicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplicaActionPerformed
+        // TODO add your handling code here:
+        pantalla.setText(pantalla.getText()+"x");
+    }//GEN-LAST:event_multiplicaActionPerformed
+
+    private void puntoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_puntoActionPerformed
+        // TODO add your handling code here:
+        pantalla.setText(pantalla.getText()+",");
+    }//GEN-LAST:event_puntoActionPerformed
+
+    private void raizCuadradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_raizCuadradaActionPerformed
+        // TODO add your handling code here:
+        pantalla.setText(pantalla.getText()+"√");
+    }//GEN-LAST:event_raizCuadradaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -315,10 +427,10 @@ public class calculadoraInterface extends javax.swing.JFrame {
     private javax.swing.JButton dos;
     private javax.swing.JButton igual;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JButton multiplica;
     private javax.swing.JButton nueve;
     private javax.swing.JButton ocho;
+    private javax.swing.JTextArea pantalla;
     private javax.swing.JButton punto;
     private javax.swing.JButton raizCuadrada;
     private javax.swing.JButton reiniciar;
