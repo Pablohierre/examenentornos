@@ -56,12 +56,18 @@ public class calculadoraInterface extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+
         pantalla.setColumns(20);
+        pantalla.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         pantalla.setRows(5);
+        pantalla.setDisabledTextColor(java.awt.Color.black);
+        pantalla.setDoubleBuffered(true);
         pantalla.setEnabled(false);
         jScrollPane1.setViewportView(pantalla);
 
         siete.setText("7");
+        siete.setBorder(new javax.swing.border.MatteBorder(null));
         siete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sieteActionPerformed(evt);
@@ -69,6 +75,7 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         uno.setText("1");
+        uno.setBorder(new javax.swing.border.MatteBorder(null));
         uno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 unoActionPerformed(evt);
@@ -76,6 +83,7 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         cuatro.setText("4");
+        cuatro.setBorder(new javax.swing.border.MatteBorder(null));
         cuatro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cuatroActionPerformed(evt);
@@ -83,6 +91,7 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         ocho.setText("8");
+        ocho.setBorder(new javax.swing.border.MatteBorder(null));
         ocho.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ochoActionPerformed(evt);
@@ -90,6 +99,7 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         dos.setText("2");
+        dos.setBorder(new javax.swing.border.MatteBorder(null));
         dos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dosActionPerformed(evt);
@@ -97,6 +107,7 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         cinco.setText("5");
+        cinco.setBorder(new javax.swing.border.MatteBorder(null));
         cinco.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cincoActionPerformed(evt);
@@ -104,6 +115,7 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         nueve.setText("9");
+        nueve.setBorder(new javax.swing.border.MatteBorder(null));
         nueve.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nueveActionPerformed(evt);
@@ -111,6 +123,7 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         tres.setText("3");
+        tres.setBorder(new javax.swing.border.MatteBorder(null));
         tres.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tresActionPerformed(evt);
@@ -118,6 +131,7 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         seis.setText("6");
+        seis.setBorder(new javax.swing.border.MatteBorder(null));
         seis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 seisActionPerformed(evt);
@@ -125,6 +139,7 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         cero.setText("0");
+        cero.setBorder(new javax.swing.border.MatteBorder(null));
         cero.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ceroActionPerformed(evt);
@@ -132,8 +147,10 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         cambiaSigno.setText("+/-");
+        cambiaSigno.setBorder(new javax.swing.border.MatteBorder(null));
 
         punto.setText(",");
+        punto.setBorder(new javax.swing.border.MatteBorder(null));
         punto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 puntoActionPerformed(evt);
@@ -141,6 +158,7 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         dividir.setText("/");
+        dividir.setBorder(new javax.swing.border.MatteBorder(null));
         dividir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dividirActionPerformed(evt);
@@ -148,6 +166,7 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         multiplica.setText("x");
+        multiplica.setBorder(new javax.swing.border.MatteBorder(null));
         multiplica.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 multiplicaActionPerformed(evt);
@@ -155,6 +174,7 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         suma.setText("+");
+        suma.setBorder(new javax.swing.border.MatteBorder(null));
         suma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sumaActionPerformed(evt);
@@ -162,6 +182,7 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         resta.setText("-");
+        resta.setBorder(new javax.swing.border.MatteBorder(null));
         resta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 restaActionPerformed(evt);
@@ -169,6 +190,7 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         igual.setText("=");
+        igual.setBorder(new javax.swing.border.MatteBorder(null));
         igual.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 igualActionPerformed(evt);
@@ -176,6 +198,7 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         raizCuadrada.setText("√");
+        raizCuadrada.setBorder(new javax.swing.border.MatteBorder(null));
         raizCuadrada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 raizCuadradaActionPerformed(evt);
@@ -183,6 +206,7 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         reiniciar.setText("C");
+        reiniciar.setBorder(new javax.swing.border.MatteBorder(null));
         reiniciar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 reiniciarActionPerformed(evt);
@@ -190,6 +214,7 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         atras.setText("CE");
+        atras.setBorder(new javax.swing.border.MatteBorder(null));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -240,17 +265,23 @@ public class calculadoraInterface extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(suma, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(suma, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(reiniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(8, 8, 8)
-                                .addComponent(resta, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(resta, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(atras, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(multiplica, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(multiplica, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(raizCuadrada, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(dividir, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
@@ -280,12 +311,6 @@ public class calculadoraInterface extends javax.swing.JFrame {
                                         .addComponent(cambiaSigno, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(punto, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(reiniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(8, 8, 8)
-                        .addComponent(atras, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(raizCuadrada, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(igual, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
