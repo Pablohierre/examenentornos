@@ -23,10 +23,10 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="jScrollPane1" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="pantalla" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
@@ -65,14 +65,16 @@
                       </Group>
                       <EmptySpace pref="18" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="raizCuadrada" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
-                          <Component id="atras" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
-                          <Component id="reiniciar" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
-                          <Component id="igual" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
+                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                              <Component id="atras" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
+                              <Component id="igual" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="reiniciar" alignment="1" min="-2" pref="70" max="-2" attributes="0"/>
+                          <Component id="raizCuadrada" alignment="1" min="-2" pref="70" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -80,10 +82,10 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jScrollPane1" min="-2" pref="35" max="-2" attributes="0"/>
+              <Component id="pantalla" min="-2" pref="94" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace pref="20" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -100,7 +102,7 @@
                                   <Component id="multiplica" alignment="3" min="-2" pref="74" max="-2" attributes="0"/>
                                   <Component id="raizCuadrada" alignment="3" min="-2" pref="74" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="7" max="32767" attributes="0"/>
                               <Component id="dividir" min="-2" pref="74" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
@@ -143,46 +145,15 @@
                       <Component id="igual" min="-2" pref="74" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="12" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
-      <Properties>
-        <Property name="verticalScrollBarPolicy" type="int" value="21"/>
-      </Properties>
-      <AuxValues>
-        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-      </AuxValues>
-
-      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-      <SubComponents>
-        <Component class="javax.swing.JTextArea" name="pantalla">
-          <Properties>
-            <Property name="columns" type="int" value="20"/>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Comic Sans MS" size="14" style="0"/>
-            </Property>
-            <Property name="rows" type="int" value="5"/>
-            <Property name="disabledTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" id="black" palette="1" red="0" type="palette"/>
-            </Property>
-            <Property name="doubleBuffered" type="boolean" value="true"/>
-            <Property name="enabled" type="boolean" value="false"/>
-          </Properties>
-        </Component>
-      </SubComponents>
-    </Container>
     <Component class="javax.swing.JButton" name="siete">
       <Properties>
         <Property name="text" type="java.lang.String" value="7"/>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-            <MatteColorBorder/>
-          </Border>
-        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sieteActionPerformed"/>
@@ -191,11 +162,6 @@
     <Component class="javax.swing.JButton" name="uno">
       <Properties>
         <Property name="text" type="java.lang.String" value="1"/>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-            <MatteColorBorder/>
-          </Border>
-        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="unoActionPerformed"/>
@@ -204,11 +170,6 @@
     <Component class="javax.swing.JButton" name="cuatro">
       <Properties>
         <Property name="text" type="java.lang.String" value="4"/>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-            <MatteColorBorder/>
-          </Border>
-        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cuatroActionPerformed"/>
@@ -217,11 +178,6 @@
     <Component class="javax.swing.JButton" name="ocho">
       <Properties>
         <Property name="text" type="java.lang.String" value="8"/>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-            <MatteColorBorder/>
-          </Border>
-        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ochoActionPerformed"/>
@@ -230,11 +186,6 @@
     <Component class="javax.swing.JButton" name="dos">
       <Properties>
         <Property name="text" type="java.lang.String" value="2"/>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-            <MatteColorBorder/>
-          </Border>
-        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dosActionPerformed"/>
@@ -243,11 +194,6 @@
     <Component class="javax.swing.JButton" name="cinco">
       <Properties>
         <Property name="text" type="java.lang.String" value="5"/>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-            <MatteColorBorder/>
-          </Border>
-        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cincoActionPerformed"/>
@@ -256,11 +202,6 @@
     <Component class="javax.swing.JButton" name="nueve">
       <Properties>
         <Property name="text" type="java.lang.String" value="9"/>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-            <MatteColorBorder/>
-          </Border>
-        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nueveActionPerformed"/>
@@ -269,11 +210,6 @@
     <Component class="javax.swing.JButton" name="tres">
       <Properties>
         <Property name="text" type="java.lang.String" value="3"/>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-            <MatteColorBorder/>
-          </Border>
-        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tresActionPerformed"/>
@@ -282,11 +218,6 @@
     <Component class="javax.swing.JButton" name="seis">
       <Properties>
         <Property name="text" type="java.lang.String" value="6"/>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-            <MatteColorBorder/>
-          </Border>
-        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="seisActionPerformed"/>
@@ -295,11 +226,6 @@
     <Component class="javax.swing.JButton" name="cero">
       <Properties>
         <Property name="text" type="java.lang.String" value="0"/>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-            <MatteColorBorder/>
-          </Border>
-        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ceroActionPerformed"/>
@@ -308,21 +234,14 @@
     <Component class="javax.swing.JButton" name="cambiaSigno">
       <Properties>
         <Property name="text" type="java.lang.String" value="+/-"/>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-            <MatteColorBorder/>
-          </Border>
-        </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cambiaSignoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="punto">
       <Properties>
         <Property name="text" type="java.lang.String" value=","/>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-            <MatteColorBorder/>
-          </Border>
-        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="puntoActionPerformed"/>
@@ -331,11 +250,6 @@
     <Component class="javax.swing.JButton" name="dividir">
       <Properties>
         <Property name="text" type="java.lang.String" value="/"/>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-            <MatteColorBorder/>
-          </Border>
-        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dividirActionPerformed"/>
@@ -344,11 +258,6 @@
     <Component class="javax.swing.JButton" name="multiplica">
       <Properties>
         <Property name="text" type="java.lang.String" value="x"/>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-            <MatteColorBorder/>
-          </Border>
-        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="multiplicaActionPerformed"/>
@@ -357,11 +266,6 @@
     <Component class="javax.swing.JButton" name="suma">
       <Properties>
         <Property name="text" type="java.lang.String" value="+"/>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-            <MatteColorBorder/>
-          </Border>
-        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sumaActionPerformed"/>
@@ -370,11 +274,6 @@
     <Component class="javax.swing.JButton" name="resta">
       <Properties>
         <Property name="text" type="java.lang.String" value="-"/>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-            <MatteColorBorder/>
-          </Border>
-        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="restaActionPerformed"/>
@@ -383,11 +282,6 @@
     <Component class="javax.swing.JButton" name="igual">
       <Properties>
         <Property name="text" type="java.lang.String" value="="/>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-            <MatteColorBorder/>
-          </Border>
-        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="igualActionPerformed"/>
@@ -395,12 +289,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="raizCuadrada">
       <Properties>
-        <Property name="text" type="java.lang.String" value="&#x221a;"/>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-            <MatteColorBorder/>
-          </Border>
-        </Property>
+        <Property name="text" type="java.lang.String" value="1/x"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="raizCuadradaActionPerformed"/>
@@ -409,11 +298,6 @@
     <Component class="javax.swing.JButton" name="reiniciar">
       <Properties>
         <Property name="text" type="java.lang.String" value="C"/>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-            <MatteColorBorder/>
-          </Border>
-        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="reiniciarActionPerformed"/>
@@ -422,12 +306,15 @@
     <Component class="javax.swing.JButton" name="atras">
       <Properties>
         <Property name="text" type="java.lang.String" value="CE"/>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-            <MatteColorBorder/>
-          </Border>
-        </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="atrasActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="pantalla">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pantallaActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

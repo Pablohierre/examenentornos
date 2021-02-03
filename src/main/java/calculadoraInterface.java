@@ -3,18 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-//PROBANDO UN NUEVO COMMIT
-//HOLA
-
+/*Prueba*/
 /**
  *
  * @author rober
  */
 public class calculadoraInterface extends javax.swing.JFrame {
 
-    int num1;
+    String memoria1;
     String signo;
-    int num2;
+    String memoria2;
     /**
      * Creates new form calculadoraInterface
      */
@@ -31,8 +29,6 @@ public class calculadoraInterface extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        pantalla = new javax.swing.JTextArea();
         siete = new javax.swing.JButton();
         uno = new javax.swing.JButton();
         cuatro = new javax.swing.JButton();
@@ -53,21 +49,11 @@ public class calculadoraInterface extends javax.swing.JFrame {
         raizCuadrada = new javax.swing.JButton();
         reiniciar = new javax.swing.JButton();
         atras = new javax.swing.JButton();
+        pantalla = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
-
-        pantalla.setColumns(20);
-        pantalla.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
-        pantalla.setRows(5);
-        pantalla.setDisabledTextColor(java.awt.Color.black);
-        pantalla.setDoubleBuffered(true);
-        pantalla.setEnabled(false);
-        jScrollPane1.setViewportView(pantalla);
-
         siete.setText("7");
-        siete.setBorder(new javax.swing.border.MatteBorder(null));
         siete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sieteActionPerformed(evt);
@@ -75,7 +61,6 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         uno.setText("1");
-        uno.setBorder(new javax.swing.border.MatteBorder(null));
         uno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 unoActionPerformed(evt);
@@ -83,7 +68,6 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         cuatro.setText("4");
-        cuatro.setBorder(new javax.swing.border.MatteBorder(null));
         cuatro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cuatroActionPerformed(evt);
@@ -91,7 +75,6 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         ocho.setText("8");
-        ocho.setBorder(new javax.swing.border.MatteBorder(null));
         ocho.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ochoActionPerformed(evt);
@@ -99,7 +82,6 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         dos.setText("2");
-        dos.setBorder(new javax.swing.border.MatteBorder(null));
         dos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dosActionPerformed(evt);
@@ -107,7 +89,6 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         cinco.setText("5");
-        cinco.setBorder(new javax.swing.border.MatteBorder(null));
         cinco.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cincoActionPerformed(evt);
@@ -115,7 +96,6 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         nueve.setText("9");
-        nueve.setBorder(new javax.swing.border.MatteBorder(null));
         nueve.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nueveActionPerformed(evt);
@@ -123,7 +103,6 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         tres.setText("3");
-        tres.setBorder(new javax.swing.border.MatteBorder(null));
         tres.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tresActionPerformed(evt);
@@ -131,7 +110,6 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         seis.setText("6");
-        seis.setBorder(new javax.swing.border.MatteBorder(null));
         seis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 seisActionPerformed(evt);
@@ -139,7 +117,6 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         cero.setText("0");
-        cero.setBorder(new javax.swing.border.MatteBorder(null));
         cero.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ceroActionPerformed(evt);
@@ -147,10 +124,13 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         cambiaSigno.setText("+/-");
-        cambiaSigno.setBorder(new javax.swing.border.MatteBorder(null));
+        cambiaSigno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cambiaSignoActionPerformed(evt);
+            }
+        });
 
         punto.setText(",");
-        punto.setBorder(new javax.swing.border.MatteBorder(null));
         punto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 puntoActionPerformed(evt);
@@ -158,7 +138,6 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         dividir.setText("/");
-        dividir.setBorder(new javax.swing.border.MatteBorder(null));
         dividir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dividirActionPerformed(evt);
@@ -166,7 +145,6 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         multiplica.setText("x");
-        multiplica.setBorder(new javax.swing.border.MatteBorder(null));
         multiplica.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 multiplicaActionPerformed(evt);
@@ -174,7 +152,6 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         suma.setText("+");
-        suma.setBorder(new javax.swing.border.MatteBorder(null));
         suma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sumaActionPerformed(evt);
@@ -182,7 +159,6 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         resta.setText("-");
-        resta.setBorder(new javax.swing.border.MatteBorder(null));
         resta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 restaActionPerformed(evt);
@@ -190,15 +166,13 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         igual.setText("=");
-        igual.setBorder(new javax.swing.border.MatteBorder(null));
         igual.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 igualActionPerformed(evt);
             }
         });
 
-        raizCuadrada.setText("√");
-        raizCuadrada.setBorder(new javax.swing.border.MatteBorder(null));
+        raizCuadrada.setText("1/x");
         raizCuadrada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 raizCuadradaActionPerformed(evt);
@@ -206,7 +180,6 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         reiniciar.setText("C");
-        reiniciar.setBorder(new javax.swing.border.MatteBorder(null));
         reiniciar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 reiniciarActionPerformed(evt);
@@ -214,7 +187,17 @@ public class calculadoraInterface extends javax.swing.JFrame {
         });
 
         atras.setText("CE");
-        atras.setBorder(new javax.swing.border.MatteBorder(null));
+        atras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                atrasActionPerformed(evt);
+            }
+        });
+
+        pantalla.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pantallaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -222,8 +205,8 @@ public class calculadoraInterface extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pantalla)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -255,20 +238,21 @@ public class calculadoraInterface extends javax.swing.JFrame {
                             .addComponent(dividir, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(raizCuadrada, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(atras, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(reiniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(igual, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(atras, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(igual, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(reiniciar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(raizCuadrada, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pantalla, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                        .addGap(11, 11, 11)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -282,7 +266,7 @@ public class calculadoraInterface extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(multiplica, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(raizCuadrada, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
                                 .addComponent(dividir, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -313,7 +297,7 @@ public class calculadoraInterface extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(igual, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         pack();
@@ -331,12 +315,20 @@ public class calculadoraInterface extends javax.swing.JFrame {
 
     private void sumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sumaActionPerformed
         // TODO add your handling code here:
-        pantalla.setText(pantalla.getText()+"+");
+        if (!pantalla.getText().equals("")){
+            memoria1= pantalla.getText();
+            signo="+";
+            pantalla.setText("");
+        }
     }//GEN-LAST:event_sumaActionPerformed
 
     private void dividirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dividirActionPerformed
         // TODO add your handling code here:
-        pantalla.setText(pantalla.getText()+"/");
+        if (!pantalla.getText().equals("")){
+            memoria1= pantalla.getText();
+            signo="-";
+            pantalla.setText("");
+        }
     }//GEN-LAST:event_dividirActionPerformed
 
     private void sieteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sieteActionPerformed
@@ -346,9 +338,38 @@ public class calculadoraInterface extends javax.swing.JFrame {
 
     private void igualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_igualActionPerformed
         // TODO add your handling code here:
-        pantalla.setText(pantalla.getText()+"=");
+        String resultado;
+        memoria2= pantalla.getText();
+        
+        if (!memoria2.equals("")){
+            resultado= calculadora(memoria1, memoria2, signo);
+            pantalla.setText(resultado);
+        }
     }//GEN-LAST:event_igualActionPerformed
 
+    
+    public static String calculadora(String memoria1, String memoria2, String signo){
+        Double resultado=0.0;
+        String respuesta;
+        
+        if (signo.equals("-")){
+            resultado= Double.parseDouble(memoria1)-Double.parseDouble(memoria2);
+        }
+        if (signo.equals("+")){
+            resultado= Double.parseDouble(memoria1)+Double.parseDouble(memoria2);
+        }
+        if (signo.equals("*")){
+            resultado= Double.parseDouble(memoria1)*Double.parseDouble(memoria2);
+        }
+        if (signo.equals("/")){
+            resultado= Double.parseDouble(memoria1)/Double.parseDouble(memoria2);
+        }
+        
+        respuesta= resultado.toString();
+        return respuesta;
+        
+    }
+    
     private void reiniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reiniciarActionPerformed
         // TODO add your handling code here:
         pantalla.setText("");
@@ -391,23 +412,84 @@ public class calculadoraInterface extends javax.swing.JFrame {
 
     private void restaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_restaActionPerformed
         // TODO add your handling code here:
-        pantalla.setText(pantalla.getText()+"-");
+        if (!pantalla.getText().equals("")){
+            memoria1= pantalla.getText();
+            signo="-";
+            pantalla.setText("");
+        }
     }//GEN-LAST:event_restaActionPerformed
 
     private void multiplicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplicaActionPerformed
         // TODO add your handling code here:
-        pantalla.setText(pantalla.getText()+"x");
+        if (!pantalla.getText().equals("")){
+            memoria1= pantalla.getText();
+            signo="*";
+            pantalla.setText("");
+        }
     }//GEN-LAST:event_multiplicaActionPerformed
 
     private void puntoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_puntoActionPerformed
         // TODO add your handling code here:
-        pantalla.setText(pantalla.getText()+",");
+        String cadena;
+        cadena= pantalla.getText();
+        if (cadena.length()<=0){
+            pantalla.setText("0,");
+        } else {
+            if(!existepunto(pantalla.getText())){
+                pantalla.setText(pantalla.getText()+",");
+            }
+        }
     }//GEN-LAST:event_puntoActionPerformed
 
+    public static boolean existepunto(String cadena){
+        boolean resultado;
+        resultado= false;
+        
+        for (int i=0; i<cadena.length();i++){
+            if (cadena.substring(i, i+1).equals(",")){
+                resultado= true;
+                break;
+            }
+        }
+        return resultado;
+    }
+    
     private void raizCuadradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_raizCuadradaActionPerformed
         // TODO add your handling code here:
-        pantalla.setText(pantalla.getText()+"√");
+        String cadena;
+        Double num;
+        cadena= pantalla.getText();
+        if (cadena.length()>0){
+            num= 1/(Double.parseDouble(cadena));
+            pantalla.setText(num.toString());
+        }
     }//GEN-LAST:event_raizCuadradaActionPerformed
+
+    private void pantallaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pantallaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pantallaActionPerformed
+
+    private void atrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atrasActionPerformed
+        // TODO add your handling code here:
+        String cadena;
+        cadena= pantalla.getText();
+        
+        if (cadena.length()>0){
+            cadena= cadena.substring(0, cadena.length()-1);
+            pantalla.setText(cadena);
+        }
+    }//GEN-LAST:event_atrasActionPerformed
+
+    private void cambiaSignoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cambiaSignoActionPerformed
+        // TODO add your handling code here:
+        Double num;
+        String cadena;
+        cadena= pantalla.getText();
+        if (cadena.length()>0){
+            num= (-1)*Double.parseDouble(cadena);
+            pantalla.setText(num.toString());
+        }
+    }//GEN-LAST:event_cambiaSignoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -453,11 +535,10 @@ public class calculadoraInterface extends javax.swing.JFrame {
     private javax.swing.JButton dividir;
     private javax.swing.JButton dos;
     private javax.swing.JButton igual;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton multiplica;
     private javax.swing.JButton nueve;
     private javax.swing.JButton ocho;
-    private javax.swing.JTextArea pantalla;
+    private javax.swing.JTextField pantalla;
     private javax.swing.JButton punto;
     private javax.swing.JButton raizCuadrada;
     private javax.swing.JButton reiniciar;
