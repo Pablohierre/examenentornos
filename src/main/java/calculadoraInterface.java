@@ -20,6 +20,9 @@ public class calculadoraInterface extends javax.swing.JFrame {
      */
     public calculadoraInterface() {
         initComponents();
+        switch(num2) {
+        case "log"= op.Math.log(op);
+        }
     }
 
     /**
